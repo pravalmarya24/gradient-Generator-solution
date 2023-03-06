@@ -13,7 +13,7 @@ export const Button = styled.button`
   border-radius: 5px;
   cursor: pointer;
   outline: none;
-  opacity: 0.5;
+  opacity: ${props => (props.isActiveBtn ? 1 : 0.5)};
   font-family: 'Roboto';
   font-size: 16;
   font-weight: 500;

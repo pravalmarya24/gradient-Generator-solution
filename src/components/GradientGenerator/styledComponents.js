@@ -2,7 +2,10 @@ import styled from 'styled-components'
 // Style your elements here
 export const GradientBgContainer = styled.div`
   height: 100vh;
-  background-image: linear-gradient(${props => props.hexCodeOne});
+  background-image: linear-gradient(
+    to top,
+    ${(props => props.hexCodeOne, props.hexCodeTwo)}
+  );
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -17,12 +20,20 @@ export const Form = styled.form`
   justify-content: center;
 `
 
-export const CssColorGradient = styled.h1`
+export const CssColorGradient = styled.p`
   font-family: 'Roboto';
-  font-size: ${props => (props.headline ? '24px' : '30px')};
+  font-size: 24px;
   font-weight: 500;
   color: #ffffff;
 `
+
+export const CssColorGradientHead = styled.h1`
+  font-family: 'Roboto';
+  font-size: 30px;
+  font-weight: 500;
+  color: #ffffff;
+`
+
 export const UnorderedList = styled.ul`
   display: flex;
   padding-left: 0;
@@ -32,7 +43,7 @@ export const UnorderedList = styled.ul`
   justify-content: space-between;
   margin-top: 40px;
 `
-export const PickTheColorHeading = styled.h1`
+export const PickTheColorHeading = styled.p`
   font-family: 'Roboto';
   font-size: 26px;
   font-weight: 500;
@@ -57,6 +68,14 @@ export const ColorInputEleContainer = styled.div`
   align-items: center;
   margin: 30px;
 `
+
+export const HexaColorPara = styled.p`
+  font-family: 'Roboto';
+  font-size: 17px;
+  font-weight: bold;
+  color: #ffffff;
+`
+
 export const GenerateBtn = styled.button`
   height: 36px;
   width: 110px;
