@@ -3,8 +3,9 @@ import styled from 'styled-components'
 export const GradientBgContainer = styled.div`
   height: 100vh;
   background-image: linear-gradient(
-    to top,
-    ${(props => props.hexCodeOne, props.hexCodeTwo)}
+    to ${props => props.direction},
+    ${props => props.hexCodeOne},
+    ${props => props.hexCodeTwo}
   );
   background-size: cover;
   display: flex;

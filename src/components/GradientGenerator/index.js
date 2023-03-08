@@ -76,10 +76,11 @@ class GradientGenerator extends Component {
       directionOb,
       isActiveBtn,
     } = this.state
+    console.log(directionOb)
     return (
       <GradientBgContainer
-        hexCodeOne={formInputOne}
-        hexCodeTwo={formInputTwo}
+        hexCodeOne="formInputOne"
+        hexCodeTwo="formInputTwo"
         direction={directionOb}
         data-testid="gradientGenerator"
       >
